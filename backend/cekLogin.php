@@ -9,7 +9,7 @@ include 'koneksi.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// menyeleksi data admin dengan username dan password yang sesuai
+// menyeleksi data user dengan username dan password yang sesuai
 $data = mysqli_query($koneksi, "select * from user where username='$username' and password='$password'");
 
 // menghitung jumlah data yang ditemukan

@@ -10,15 +10,10 @@
 
 <body>
     <?php
-    $mydate = date("H:i:s");
-    header("Refresh: 1; JAM=$mydate");
-    session_start();
-    if ($_SESSION['status'] != "login") {
-        header("location:login.php?pesan=belum_login");
-    }
+    include '../backend/status.php';
     ?>
     <h4>Hai, <?php echo $_SESSION['username']; ?>! anda telah login. Jam saat ini <?php echo $mydate; ?></h4>
-    <a href="logout.php">LOGOUT</a>
+    <a href="../backend/logout.php">LOGOUT</a>
 </body>
 
 </html>
